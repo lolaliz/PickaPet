@@ -1,9 +1,6 @@
 require('dotenv').config();
 const keys = require('../keys.js');
 
-// const api_key = keys.petfinder.api_key;
-// const api_secret = keys.petfinder.api_secret;
-
 const api_key = keys.petfinder.api_key;
 const api_secret = keys.petfinder.api_secret;
 
