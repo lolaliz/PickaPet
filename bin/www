@@ -1,0 +1,17 @@
+require('dotenv').config();
+const port = process.env.PORT || 3000;
+const server = require('../server");
+
+const onError = (err) => {
+    console.log("server encountered an error trying to start", err);
+}
+
+const onSuccess = () => {
+    console.log('Server is running on http://localhost:${port});
+}
+
+server
+    .set("port", port)
+    .listen(port)
+    .on("error, onError)
+    .on("listening", onSuccess)
