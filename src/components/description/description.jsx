@@ -1,7 +1,7 @@
 // build header component here
 import React from 'react';
 
-export class Description extends React.Component {
+class Description extends React.Component {
     render() {
         return (
             <div id="description">
@@ -16,3 +16,5 @@ export class Description extends React.Component {
         );
     }
 }
+
+export default Description;

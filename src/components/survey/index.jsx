@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import qBank from './qbank.js';
+// import axios from 'axios';
 
 class Survey extends Component {
     constructor() {
         super();
-        
+
         this.state = {
-          answers: new Array(10).fill(false),
+            answers: new Array(10).fill(false),
+            zip: ''
         };
 
         this.handleOptionChange = this.handleOptionChange.bind(this); // do this if you're passing down a function
@@ -14,17 +16,27 @@ class Survey extends Component {
 
     handleOptionChange(num, name) {
         let newAnswers = this.state.answers;
-        newAnswers[name-1] = num;
-        console.log(newAnswers);
+        newAnswers[name - 1] = num;
         this.setState({
             answers: newAnswers
+        });
+    }
+
+    updateZip(event) {
+        this.setState({
+            zip: event.target.value.substr(0, 5)
         });
     }
 
     handleFormSubmit = (formSubmitEvent) => {
         formSubmitEvent.preventDefault();
         console.log('Submit');
-        // add more stuff here
+        console.log('Final Answers', this.state.answers);
+        console.log('Zip Code', this.state.zip);
+        // axios.post('/api/pets')
+        //     .then((res) => {
+        //         console.log(res);
+        //     });
     }
 
     render() {
@@ -34,14 +46,21 @@ class Survey extends Component {
                 <form onSubmit={this.handleFormSubmit} className="choices">
                     <ol>
                         {qBank.map((question) => {
-                            return <Question q={question.q} c={question.c} name={question.id} key={question.id} handleOptionChange={this.handleOptionChange}/>
+                            return <Question q={question.q} c={question.c} name={question.id} key={question.id} handleOptionChange={this.handleOptionChange} />
                         })}
                     </ol>
-                    <button className="btn btn-default" type="submit" onClick={this.toggle}>See Available Dogs!</button>
+                    <div className="row">
+                        <div className="input-field col s3">
+                            <i className="material-icons prefix">local_post_office</i>
+                            <input id="icon_prefix" type="text" className="validate" 
+                                value={this.state.zip}
+                                onChange={this.updateZip.bind(this)}
+                            />
+                            <label htmlFor="icon_prefix">ZIP code</label>
+                        </div>
+                    </div>
+                    <button className="btn btn-default" type="submit" onClick={this.handleFormSubmit}>See Available Dogs!</button>
                 </form>
-                {this.state.toggle &&
-                    <Results />
-                }
             </div>
         );
     }
@@ -53,17 +72,17 @@ class Question extends Component {
         return (
             <li className="question">
                 <p><strong>{q}</strong></p>
-                
-                    {c.map((choice) => {
-                        return <Choice 
-                            option={choice.option} 
-                            num={choice.id} 
-                            name={name} 
-                            key={choice.id} 
-                            handleOptionChange={handleOptionChange}
-                        />
-                    })}
-        
+
+                {c.map((choice) => {
+                    return <Choice
+                        option={choice.option}
+                        num={choice.id}
+                        name={name}
+                        key={choice.id}
+                        handleOptionChange={handleOptionChange}
+                    />
+                })}
+
             </li>
         );
     }
@@ -73,26 +92,15 @@ class Choice extends Component {
     render() {
         const { option, num, name, handleOptionChange } = this.props;
         return (
-            <div className="radio">
+            <p>
                 <label>
-                    <input type="radio" 
-                    name={name} 
-                    value={num} 
-                    onClick={()=> handleOptionChange(num, name)}/>
-                    {option}
+                    <input type="radio" className="with-gap" name={name} value={num} onClick={()=> handleOptionChange(num, name)} />
+                    <span>{option}</span>
                 </label>
-            </div>
+            </p>
         );
     }
 
-}
-
-class Results extends Component {
-    render() {
-        return (
-            <p><img src="https://media.giphy.com/media/gcXcSRYZ9cGWY/giphy.gif" alt="puppies" /></p>
-        );
-    }
 }
 
 export default Survey;

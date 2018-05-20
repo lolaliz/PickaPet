@@ -1,41 +1,40 @@
 {
-  "name": "pickapet",
-  "version": "1.0.0",
-  "description": "a service that matches users with adoptable pets based on their personalities and lifestyles",
-  "main": "server.js",
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jkhwu/PickaPet.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/jkhwu/PickaPet/issues"
-  },
-  "homepage": "https://github.com/jkhwu/PickaPet#readme",
-  "dependencies": {
-    "axios": "^0.18.0",
-    "body-parser": "^1.18.3",
-    "connect-ensure-login": "^0.1.1",
-    "cookie-parser": "^1.3.5",
-    "ejs": "^2.3.3",
-    "express": "^4.16.3",
-    "express-session": "^1.11.3",
-    "morgan": "^1.6.1",
-    "mysql2": "^1.5.3",
-    "passport": "^0.2.2",
-    "passport-facebook": "^2.0.0",
-    "petfinder": "^0.1.1",
-    "react": "^16.3.2",
-    "react-dom": "^16.3.2",
-    "react-scripts": "^1.1.4",
-    "sequelize": "^4.37.7"
-  },
-  "devDependencies": {}
+    "name": "pickapet",
+    "version": "1.0.0",
+    "description": "a service that matches users with adoptable pets based on their personalities and lifestyles",
+    "main": "server.js",
+    "scripts": {
+        "start": "react-scripts start",
+        "build": "react-scripts build",
+        "test": "react-scripts test --env=jsdom",
+        "eject": "react-scripts eject"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/jkhwu/PickaPet.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/jkhwu/PickaPet/issues"
+    },
+    "homepage": "https://github.com/jkhwu/PickaPet#readme",
+    "dependencies": {
+        "axios": "^0.18.0",
+        "body-parser": "^1.18.3",
+        "connect-ensure-login": "^0.1.1",
+        "cookie-parser": "^1.3.5",
+        "ejs": "^2.3.3",
+        "express": "^4.16.3",
+        "express-session": "^1.11.3",
+        "morgan": "^1.6.1",
+        "mysql2": "^1.5.3",
+        "passport": "^0.2.2",
+        "passport-facebook": "^2.0.0",
+        "petfinder": "^0.1.1",
+        "react": "^16.3.2",
+        "react-dom": "^16.3.2",
+        "react-scripts": "^1.1.4",
+        "sequelize": "^4.37.7"
+    }
 }
