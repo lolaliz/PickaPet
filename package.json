@@ -36,5 +36,6 @@
     "react-dom": "^16.3.2",
     "react-scripts": "^1.1.4",
     "sequelize": "^4.37.7"
-  }
+  },
+  "devDependencies": {}
 }
