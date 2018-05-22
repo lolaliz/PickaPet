@@ -31,6 +31,7 @@
         "mysql2": "^1.5.3",
         "passport": "^0.2.2",
         "passport-facebook": "^2.0.0",
+        "pet-finder-api": "^1.0.1",
         "petfinder": "^0.1.1",
         "react": "^16.3.2",
         "react-dom": "^16.3.2",
