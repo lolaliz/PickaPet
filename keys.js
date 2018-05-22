@@ -6,5 +6,7 @@ exports.petfinder = {
 }
 
 exports.yelp = {
-    apiKey: process.env.YELPFUSION_API_KEY
-};
+    api_key: process.env.YELPFUSION_API_KEY
+}
+
+
