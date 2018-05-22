@@ -3,6 +3,7 @@ var petRoutes = require("./routes/pet-api-routes.js");
 var userRoutes = require("./routes/user-api-routes.js");
 var express = require("express");
 var bodyParser = require("body-parser");
+var path = require('path');
 
 var app = express();
 var PORT = process.env.PORT || 8080;
@@ -12,7 +13,8 @@ var PORT = process.env.PORT || 8080;
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-app.use(express.static("../public"));
+// app.use(express.static("../public"));
+app.use('/', express.static(`${__dirname}/client / build`));
 
 app.use('/api/pets', petRoutes);
 app.use('/api/users', userRoutes);
