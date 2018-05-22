@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import qBank from './qbank.js';
-// import axios from 'axios';
+import axios from 'axios';
+
 
 class Survey extends Component {
     constructor() {
@@ -32,11 +33,12 @@ class Survey extends Component {
         formSubmitEvent.preventDefault();
         console.log('Submit');
         console.log('Final Answers', this.state.answers);
+        console.log('kids?', this.state.answers[3]);
         console.log('Zip Code', this.state.zip);
-        // axios.post('/api/pets')
-        //     .then((res) => {
-        //         console.log(res);
-        //     });
+        axios.post('/api/pets')
+            .then((res) => {
+                console.log(res);
+            });
     }
 
     render() {
@@ -101,6 +103,7 @@ class Choice extends Component {
         );
     }
 
-}
+};
+
 
 export default Survey;
