@@ -5,4 +5,6 @@ exports.petfinder = {
     api_secret: process.env.PETFINDER_API_SECRET
 }
 
-//andres
+exports.yelp = {
+    api_key: process.env.YELPFUSION_API_KEY
+}
