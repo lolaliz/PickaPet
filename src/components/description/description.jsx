@@ -8,7 +8,7 @@ class Description extends React.Component {
                <p>
                    Welcome! PickaPet is designed to help you find the perfect pooch for your lifestyle.
                    With so many adoptable dogs available, choosing the right one can quickly become overwhelming.
-                   Our survey will match you with the right potential pooch pals in your area! Click the survey button to get 
+                   Our survey will match you with the right potential pooch pals in your area! Take the survey to get 
                    started!
                </p>
 

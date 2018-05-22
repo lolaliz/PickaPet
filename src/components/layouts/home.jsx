@@ -14,7 +14,3 @@ class HomeLayout extends React.Component {
     }
 }
 
-// ComponentDidMount() {
-//     axios.get(/pitbull).then()
-//         .catch()
-// }
