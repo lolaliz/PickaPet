@@ -1,7 +1,9 @@
 DROP DATABASE IF EXISTS pick_a_pet;
 CREATE DATABASE pick_a_pet;
 
+USE pick_a_pet;
   
+DROP TABLE IF EXISTS dogs_table;
 CREATE TABLE dogs_table (
     id INTEGER AUTO_INCREMENT NOT NULL, 
     breed VARCHAR(100),
@@ -13,8 +15,8 @@ CREATE TABLE dogs_table (
     PRIMARY KEY (id)
 );
 
-load data local infile 'C:/Users/Andres/Downloads/dogs_breeds_seed.csv' into table dogs_table fields terminated by ',' 
-lines terminated by '\r\n' (breed, height, weight, size, child_friendly, energy_level);
+load data local infile './dogs_breeds_seed.csv' into table dogs_table fields terminated by ',' 
+lines terminated by '\r' (breed, height, weight, size, child_friendly, energy_level);
 
 --select the file path in which you have your csv file.
 
