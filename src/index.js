@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from "react-dom";
-import App from "./world";
+import SurveyLayout from "./components/layouts/survey.jsx";
 
-ReactDOM.render(<App/>,document.getElementById("root"))
+ReactDOM.render(<SurveyLayout/>,document.getElementById("root"))
 
 

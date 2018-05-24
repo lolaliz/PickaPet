@@ -1,12 +1,12 @@
 const router = require('express').Router();
 
-router.get('/', (req, res) => {
+router.get('/pets', (req, res) => {
     res.json({
         message: "pet get route"
     });
 });
 
-router.post('/', (req, res) => {
+router.post('/pets', (req, res) => {
       res.json({
         message: "pet post route"
     });

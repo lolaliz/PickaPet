@@ -15,7 +15,7 @@ module.exports = {
     hot: true,
     open: true,
     proxy:{
-      "/Api":"http://localhost:3000"
+      "/api":"http://localhost:3000"
     }
   },
   module:{

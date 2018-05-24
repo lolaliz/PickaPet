@@ -18,8 +18,8 @@ app.use(bodyParser.json());
 // app.use('/', express.static(`${__dirname}/client/build`))
 
 
-app.use('/api/pets', petRoutes);
-app.use('/api/users', userRoutes);
+app.use('/api', petRoutes);
+app.use('/api', userRoutes);
 
 // db.sequelize.sync({ force: true }).then(function() {
 // app.listen(PORT, function() {
