@@ -15,9 +15,4 @@ CREATE TABLE dogs_table (
     PRIMARY KEY (id)
 );
 
-load data local infile './dogs_breeds_seed.csv' into table dogs_table fields terminated by ',' 
-lines terminated by '\r' (breed, height, weight, size, child_friendly, energy_level);
-
---select the file path in which you have your csv file.
-
     
