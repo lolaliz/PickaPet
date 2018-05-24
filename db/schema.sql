@@ -1,6 +1,5 @@
 DROP DATABASE IF EXISTS pick_a_pet;
 CREATE DATABASE pick_a_pet;
-
   
 CREATE TABLE dogs_table (
     id INTEGER AUTO_INCREMENT NOT NULL, 
