@@ -1,6 +1,5 @@
 DROP DATABASE IF EXISTS pick_a_pet;
 CREATE DATABASE pick_a_pet;
-
   
 CREATE TABLE dogs_table (
     id INTEGER AUTO_INCREMENT NOT NULL, 
@@ -9,7 +8,7 @@ CREATE TABLE dogs_table (
     weight INTEGER(10), 
     size VARCHAR(30), 
     child_friendly VARCHAR(30), 
-    energy_level VARCHAR(30),
+    energy_level INTEGER(30),
     PRIMARY KEY (id)
 );
 

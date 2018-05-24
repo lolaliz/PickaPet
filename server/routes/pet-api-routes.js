@@ -1,12 +1,20 @@
 const router = require('express').Router();
 
-router.get('/', (req, res) => {
+router.get('/pets', (req, res) => {
     res.json({
         message: "pet get route"
     });
 });
 
-router.post('/', (req, res) => {
+router.post('/pets', (req, res) => {
+      res.json({
+        message: "pet post route"
+    });
+});
+
+module.exports = router;
+
+
 //     var mysql = require('mysql2');  
 
 // var connection2 = mysql.createConnection({
@@ -27,10 +35,3 @@ router.post('/', (req, res) => {
 //         });
 //         connection2.end();
 // }
-
-    res.json({
-        message: "pet post route"
-    });
-});
-
-module.exports = router;
