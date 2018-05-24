@@ -9,4 +9,6 @@ exports.yelp = {
     api_key: process.env.YELPFUSION_API_KEY
 }
 
-
+exports.googlemaps = {
+    api_key: process.env.GOOGLEMAPS_API_KEY
+}
