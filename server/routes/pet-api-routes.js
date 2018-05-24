@@ -7,6 +7,14 @@ router.get('/', (req, res) => {
 });
 
 router.post('/', (req, res) => {
+      res.json({
+        message: "pet post route"
+    });
+});
+
+module.exports = router;
+
+
 //     var mysql = require('mysql2');  
 
 // var connection2 = mysql.createConnection({
@@ -27,10 +35,3 @@ router.post('/', (req, res) => {
 //         });
 //         connection2.end();
 // }
-
-    res.json({
-        message: "pet post route"
-    });
-});
-
-module.exports = router;

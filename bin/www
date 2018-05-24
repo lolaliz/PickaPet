@@ -1,17 +1,28 @@
-require('dotenv').config();
+const path = require("path")
+
+if(!process.env.PORT) {
+  require("dotenv").config()
+}
+
+const server = require("../server");
 const port = process.env.PORT || 3000;
-const server = require('../server");
+const models = require("../models").sequelize;
 
 const onError = (err) => {
     console.log("server encountered an error trying to start", err);
 }
 
-const onSuccess = () => {
-    console.log('Server is running on http://localhost:${port});
+const onListening = () => {
+  if(!process.env.PORT){
+    console.log(`Server is running on http://localhost:${port}`)
+  }
 }
 
-server
-    .set("port", port)
-    .listen(port)
-    .on("error, onError)
-    .on("listening", onSuccess)
+server.set("port",port)
+//connecting to db
+models.sync().then(() => {
+  server
+  .listen(port)
+  .on("error",onError)
+  .on("listening",onListening);
+})

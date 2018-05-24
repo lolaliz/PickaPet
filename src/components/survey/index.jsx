@@ -35,7 +35,10 @@ class Survey extends Component {
         console.log('Final Answers', this.state.answers);
         console.log('kids?', this.state.answers[3]);
         console.log('Zip Code', this.state.zip);
-        axios.post('/api/pets')
+        axios.post('/api/pets', {
+            answers : this.state.answers,
+            zipcode : this.state.zip
+        })
             .then((res) => {
                 console.log(res);
             });
