@@ -1,10 +1,10 @@
 const router = require('express').Router();
+var pets = require ('../../api/pet.js')
+//same as index.js?
+//router.get('/api/getdogs', (req, res) => {pets.GetDogs})
+    
 
-router.get('/pets', (req, res) => {
-    res.json({
-        message: "pet get route"
-    });
-});
+//router.get('/api/getdogs', pets.GetDogs)
 
 router.post('/pets', (req, res) => {
       res.json({
@@ -34,4 +34,4 @@ module.exports = router;
 //             // }
 //         });
 //         connection2.end();
-// }
+// 

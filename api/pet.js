@@ -31,6 +31,9 @@ petfinder.findPet('92110',{'count': 5,'animal':'dog', 'size':'M', 'breed': 'Rott
    petArray.push(petInfo)
   
   }
- res.send (petArray)
+ //res.send (petArray)
+console.log(petArray)
 });
 }
+//will not call petfinder w/o calling function here
+exports.GetDogs()
