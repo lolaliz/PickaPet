@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import qBank from './qbank.js';
-import axios from 'axios';
+// import axios from 'axios';
 
 
 class Survey extends Component {
@@ -21,6 +21,7 @@ class Survey extends Component {
         this.setState({
             answers: newAnswers
         });
+        console.log(this.state.answers);
     }
 
     updateZip(event) {
@@ -29,20 +30,20 @@ class Survey extends Component {
         });
     }
 
-    // handleFormSubmit = (formSubmitEvent) => {
-    //     formSubmitEvent.preventDefault();
-    //     console.log('Submit');
-    //     console.log('Final Answers', this.state.answers);
-    //     console.log('kids?', this.state.answers[3]);
-    //     console.log('Zip Code', this.state.zip);
-    //     axios.post('/api/pets', {
-    //         answers : this.state.answers,
-    //         zipcode : this.state.zip
-    //     })
-    //         .then((res) => {
-    //             console.log(res);
-    //         });
-    // }
+    handleFormSubmit(formSubmitEvent) {
+        formSubmitEvent.preventDefault();
+        console.log('Submit');
+        console.log('Final Answers', this.state.answers);
+        console.log('kids?', this.state.answers[3]);
+        console.log('Zip Code', this.state.zip);
+        // axios.post('/api/pets', {
+        //     answers : this.state.answers,
+        //     zipcode : this.state.zip
+        // })
+        //     .then((res) => {
+        //         console.log(res);
+        //     });
+    }
 
     render() {
         return (

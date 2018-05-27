@@ -4,7 +4,7 @@ var userRoutes = require("./routes/user-api-routes.js");
 var express = require("express");
 var bodyParser = require("body-parser");
 var path = require("path");
-var pets = require ('../api/pet.js')
+var pets = require('../api/pet.js')
 const keys = require('../keys.js');
 
 var app = express();
@@ -24,7 +24,7 @@ app.use('/api', userRoutes);
 
 // express will serve up index.html if it doesn't recognize the route
 app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'public', 'index.html'));
+    res.sendFile(path.resolve(__dirname, '../public', 'index.html'));
 });
 
 //app.get('/api/getdogs', pets.GetDogs)
